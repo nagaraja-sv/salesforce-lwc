@@ -1,0 +1,20 @@
+<template>
+    <div>
+        <c-course-update course-name={pCourseName} course-fee={pCourseFee}>
+            <div class="slds-box" slot="courseSlot">
+            <lightning-input value={pCourseName} label="Please Enter Your Course Name"></lightning-input>
+            <lightning-input value={pCourseFee} label="Please Enter Course Fee" type="number" onchange={parentChangeCourseFee} > </lightning-input>
+            <lightning-button variant="brand" label="Update Course Fee" title = "Update Course Fee" onclick={parentUpdateFee} >
+           
+                
+            </lightning-button>
+            Total Course fee : {pcourseFee}
+            </div>
+            <div> This is goes to unnamed slot</div>
+        </c-course-update>
+        <lightning-button variant="brand" label="Parent Update Course Fee" title = "Update Course Fee" onclick={parentUpdateFee} ></lightning-button>
+
+        update Course Fee parent {pCourseFee}
+    
+    </div>
+</template>
